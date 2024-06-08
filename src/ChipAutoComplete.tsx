@@ -57,7 +57,7 @@ const ChipAutoComplete: FC<ChipAutoCompleteProps> = ({ tags }) => {
           </div>
         </div>
         {suggestions.length > 0 && (
-          <div className="border border-t-0 p-2 rounded-b shadow-md">
+          <div className="border border-t-0 p-2 bg-white rounded-b shadow-md">
             {suggestions.map((suggestion, index) => (
               <div
                 key={index}
@@ -70,7 +70,9 @@ const ChipAutoComplete: FC<ChipAutoCompleteProps> = ({ tags }) => {
           </div>
         )}
       </div>
-      <span className="text-gray-300">Enter a comma separated list and enjoy</span>
+      <span className="text-gray-300">
+        Enter a comma separated list and enjoy
+      </span>
     </div>
   );
 };
