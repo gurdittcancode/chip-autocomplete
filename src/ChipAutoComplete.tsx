@@ -21,6 +21,16 @@ const ChipAutoComplete: FC<ChipAutoCompleteProps> = ({ tags }) => {
     setSuggestions(matchingTags);
   };
 
+  const handleTagSelection = (tag: string) => {
+    setSelectedTags([...selectedTags, tag]);
+    setInput("");
+    setSuggestions([]);
+  };
+
+  const handleTagDelete = (tag: string) => {
+    setSelectedTags(selectedTags.filter((t: string) => t !== tag));
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto mt-10">
       <div className="border p-2 rounded">
