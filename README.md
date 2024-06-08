@@ -1,30 +1,11 @@
-# React + TypeScript + Vite
+# Chips auto complete task (HyreSnap)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## This project was built by Gurditt Singh.
 
-Currently, two official plugins are available:
+My thought process behind this task was that I could have the user simply type in an input field. Using styling, I could make it look like the chips were present inside the input field itself :P
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Then, on every key-press, I loop through the tags array and find the tags that have this input value as a substring, and push those tags to the matching tags array. Then I simply show that matching tags array.
 
-## Expanding the ESLint configuration
+While checking for a match, I make sure to check the tag with matching substring isn't already inside the selected array.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Delete case is handled in a simple and straightforward way.
