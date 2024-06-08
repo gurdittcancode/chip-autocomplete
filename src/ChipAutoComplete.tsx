@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
 interface ChipAutoCompleteProps {
   tags: string[];
 }
 
 const ChipAutoComplete: FC<ChipAutoCompleteProps> = ({ tags }) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
