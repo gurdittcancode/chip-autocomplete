@@ -56,8 +56,10 @@ const ChipAutoComplete: FC<ChipAutoCompleteProps> = ({ tags }) => {
             />
           </div>
         </div>
+      </div>
+      <div className="border border-none rounded-3xl">
         {suggestions.length > 0 && (
-          <div className="border border-t-0 p-2 bg-white rounded-b shadow-md">
+          <div className="border border-t-0 rounded-3xl p-2 bg-white rounded-b shadow-md">
             {suggestions.map((suggestion, index) => (
               <div
                 key={index}
